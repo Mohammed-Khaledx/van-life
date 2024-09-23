@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+:root {
+  --main-color: antiquewhite;
+}
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  color: unset;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "cairo", sans-serif;
+}
+
+section {
+  padding: 50px 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/** small **/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/** medium **/
+@media (min-width: 991px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/** large **/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/** End Global Roles **/
+
+.header {
+  background-color: var(--main-color);
+  padding: 20px 0;
+  height: 80px;
+}
+
+.header .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .container h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.header .container .nav a {
+  font-size: 24px;
+  margin: 0 10px;
+}
+/* ********************** */
+
+.footer {
+  background-color: rgb(36, 36, 36);
+  padding: 20px 0;
+  margin: 0;
+  color: gray;
+  text-align: center;
+  height: 60px;
+}
+
+.home {
+  background-image: url(./images/home.png);
+  background-size: cover;
+  background-position: center;
+
+  background-repeat: no-repeat;
+  filter: brightness(80%);
+  height: calc(100vh - 140px);
+}
+
+.home .container {
+  position: relative;
+  height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  z-index: 2;
+  filter: brightness(100%);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.home h1 {
+  filter: brightness(100%) !important;
+  position: relative;
+  z-index: 10;
+  font-size: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home button {
+  background-color: orange;
+  color: white;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+/* ************************************** */
+
+.about {
+  background-color: var(--main-color);
+}
+
+.about .container {
+  height: 100%;
+  padding-bottom: 30px;
+}
+
+.about img {
+  width: 100%;
+}
+
+.about .info {
+  line-height: 1.5;
+}
+
+.about .explore {
+  background-color: rgb(246, 182, 99);
+  border-radius: 10px;
+  padding: 20px 30px;
+  
+}
+
+.about .explore button {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 15px 25px;
 }
