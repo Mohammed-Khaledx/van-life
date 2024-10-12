@@ -1,12 +1,13 @@
 import "../App.css";
 import aboutImage from "../images/about1.png";
+import { Link } from "react-router-dom";
 
 export function About(params) {
   return (
     <div className="about">
-        <div className="image-container">
-          <img src={aboutImage} alt="" />
-        </div>
+      <div className="image-container">
+        <img src={aboutImage} alt="" />
+      </div>
       <div className="container">
         <div className="info">
           <h2>Do not squeeze in sedan when you could relax in a van</h2>
@@ -23,7 +24,9 @@ export function About(params) {
         </div>
         <div className="explore">
           <h3>Your destination is waiting. Your van is ready </h3>
-          <button>Explore Our vans</button>
+          
+            <Link to="/vans"><button>Explore Our vans</button></Link>
+          
         </div>
       </div>
     </div>
